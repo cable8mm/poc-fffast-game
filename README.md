@@ -5,11 +5,11 @@ This is a repository for creating and reviewing only game scenes to prove the co
 ## Development
 
 - Install Cocos2dx(0x00020100)
-- Run fffast.xcodeproj for xcode
+- Open fffast.xcodeproj for xcode
 
 ## How to play
 
-Swipe all tables to clear the stage.
+Swipe all tables to clear the stage. If you swipe too slowly, things on the table will fall and fail.
 
 ## Checklist
 
@@ -24,4 +24,4 @@ Swipe all tables to clear the stage.
 
 ## License
 
-The Water Melon project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The Poc FFFast Game project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
