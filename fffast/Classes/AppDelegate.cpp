@@ -8,28 +8,24 @@
 
 #include "AppDelegate.h"
 
-#include "cocos2d.h"
-#include "SimpleAudioEngine.h"
 #include "HelloWorldScene.h"
+#include "SimpleAudioEngine.h"
+#include "cocos2d.h"
 
 USING_NS_CC;
 using namespace CocosDenshion;
 
-AppDelegate::AppDelegate()
-{
-
+AppDelegate::AppDelegate() {
 }
 
-AppDelegate::~AppDelegate()
-{
+AppDelegate::~AppDelegate() {
 }
 
-bool AppDelegate::applicationDidFinishLaunching()
-{
+bool AppDelegate::applicationDidFinishLaunching() {
     // initialize director
     CCDirector *pDirector = CCDirector::sharedDirector();
     pDirector->setOpenGLView(CCEGLView::sharedOpenGLView());
-    
+
     // ResolutionPolicy { kResolutionExactFit, kResolutionNoBorder, kResolutionShowAll, kResolutionUnKnown }
     pDirector->getOpenGLView()->setDesignResolutionSize(1280, 768, kResolutionExactFit);
     pDirector->getOpenGLView()->setFrameSize(1280, 760);
@@ -50,16 +46,14 @@ bool AppDelegate::applicationDidFinishLaunching()
 }
 
 // This function will be called when the app is inactive. When comes a phone call,it's be invoked too
-void AppDelegate::applicationDidEnterBackground()
-{
+void AppDelegate::applicationDidEnterBackground() {
     CCDirector::sharedDirector()->stopAnimation();
     SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
     SimpleAudioEngine::sharedEngine()->pauseAllEffects();
 }
 
 // this function will be called when the app is active again
-void AppDelegate::applicationWillEnterForeground()
-{
+void AppDelegate::applicationWillEnterForeground() {
     CCDirector::sharedDirector()->startAnimation();
     SimpleAudioEngine::sharedEngine()->resumeBackgroundMusic();
     SimpleAudioEngine::sharedEngine()->resumeAllEffects();

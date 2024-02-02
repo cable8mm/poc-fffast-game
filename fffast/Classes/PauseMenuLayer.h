@@ -12,20 +12,18 @@
 #include "cocos2d.h"
 using namespace cocos2d;
 
-class PauseMenuLayer : public cocos2d::CCLayerColor
-{
+class PauseMenuLayer : public cocos2d::CCLayerColor {
 public:
     PauseMenuLayer();
     // Method 'init' in cocos2d-x returns bool, instead of 'id' in cocos2d-iphone (an object pointer)
     virtual bool init();
-    void menuResumeCallback(CCObject* pSender);
-    void menuRestartCallback(CCObject* pSender);
-    
+    void menuResumeCallback(CCObject *pSender);
+    void menuRestartCallback(CCObject *pSender);
+
     // preprocessor macro for "static create()" constructor ( node() deprecated )
     CREATE_FUNC(PauseMenuLayer);
-    
-protected:
 
+protected:
 };
 
 #endif /* defined(__fffast__PauseMenuLayer__) */

@@ -8,14 +8,15 @@
 
 #include "TableItem.h"
 
-TableItem::TableItem(CCSprite *table, CCSprite *tableCloth, CCSprite *tableObject, CCSprite *highlight, CCPoint position) {
-    this->status        = FULL_SETTING;
-    this->isSelected    = false;
-    
-    this->_table        = table;
-    this->_tableCloth   = tableCloth;
-    this->_tableObject       = tableObject;
-    this->_highlight    = highlight;
+TableItem::TableItem(CCSprite *table, CCSprite *tableCloth, CCSprite *tableObject, CCSprite *highlight,
+                     CCPoint position) {
+    this->status = FULL_SETTING;
+    this->isSelected = false;
+
+    this->_table = table;
+    this->_tableCloth = tableCloth;
+    this->_tableObject = tableObject;
+    this->_highlight = highlight;
 
     this->_table->setPosition(position);
     this->_tableCloth->setPosition(position);
@@ -29,7 +30,7 @@ void TableItem::show() {
     this->_tableObject->setVisible(true);
 }
 
-CCSprite* TableItem::tableCloth() {
+CCSprite *TableItem::tableCloth() {
     return this->_tableCloth;
 }
 
