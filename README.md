@@ -11,11 +11,11 @@ This is a repository for creating and reviewing only game scenes to prove the co
 
 Swipe all tables to clear the stage. If you swipe too slowly, things on the table will fall and fail.
 
-## Checklist
+## Coding style
 
-- Is the game easy to play
-- Less lag to enjoy the game
-- Level design possible
+```sh
+find . -name \* -print0 | xargs -0 -n1 clang-format -i
+```
 
 ## Preview
 
